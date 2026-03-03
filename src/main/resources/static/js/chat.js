@@ -323,7 +323,9 @@ function showUi(message) {
 
     const timeSpan = document.createElement("span");
     timeSpan.className = "send-time";
-    timeSpan.innerText = message.time ? message.time : formatTime(new Date());
+    let msgTime = message.sendTime || message.createdAt || message.time;
+    timeSpan.innerText = msgTime ? formatTime(msgTime) : formatTime(new Date());
+
     metaDiv.appendChild(timeSpan);
 
     contentWrapper.appendChild(bubbleArea);
@@ -740,7 +742,12 @@ function updatePartnerProfileUI(data) {
     const profileBtn = document.getElementById("opponentProfileBtn");
     if (profileBtn) {
         if (data.opponentId && data.opponentId !== 0) {
-            profileBtn.href = "/member/profile/" + data.opponentId;
+            // ❌ 기존 코드: 여기서 profile 경로로 보내고 있었습니다.
+            // profileBtn.href = "/member/profile/" + data.opponentId;
+
+            // ⭕ 수정 후: userPage 경로로 변경!
+            profileBtn.href = "/member/userPage/" + data.opponentId;
+
             profileBtn.style.display = "inline-block";
             profileBtn.innerText = "상대방 프로필 확인 >";
         } else {
