@@ -76,7 +76,7 @@ if (countRes.ok) {
 
     nicknameEl.textContent = user.nickname;
     ageEl.textContent = `(${user.age})`;
-    introEl.textContent = user.intro ?? "자기소개를 작성해 주세요.";
+    introEl.textContent = user.intro ?? "자기소개를 작성해주세요.";
 
     const flagMap = { KOREAN: "🇰🇷", JAPANESE: "🇯🇵" };
     nativeFlagEl.textContent = flagMap[user.nativeLanguage] ?? "❓";

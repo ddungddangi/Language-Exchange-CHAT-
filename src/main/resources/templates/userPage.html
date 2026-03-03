@@ -12,7 +12,7 @@
         /*<![CDATA[*/
         const CONTEXT_PATH = /*[[@{/}]]*/ "/";
         const PAGE_MEMBER_ID = /*[[${user.memberId}]]*/ ""; // 예: sya48 (문자)
-        const PAGE_USER_ID = /*[[${user.id}]]*/ "";         // 🚨 추가: DB 고유번호 (숫자)
+        const PAGE_USER_ID = /*[[${user.id}]]*/ "";         // 추가: DB 고유번호 (숫자)
         /*]]>*/
     </script>
     <script type="module" th:src="@{/js/member/userPage.js}"></script>
@@ -83,7 +83,10 @@
 
                 <div class="glass card profile-card">
                     <div class="profile-intro">
-                        <p id="intro" th:text="${user.intro}">자기소개가 없습니다.</p>
+                        <p id="intro"
+                           th:text="${#strings.isEmpty(user.intro) ? '자기소개를 작성해주세요.' : user.intro}">
+                            자기소개가 없습니다.
+                        </p>
                     </div>
                 </div>
 
