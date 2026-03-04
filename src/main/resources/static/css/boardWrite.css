@@ -500,7 +500,8 @@ body {
 
 /* 등록 버튼 (Home 스타일 활용) */
 .submit-btn {
-  background: linear-gradient(135deg, #7b8cff, #7be0cf); /* Home의 포인트 컬러 활용 */
+  /* 1. 배경을 파란색에서 핑크/연보라 그라데이션으로 변경 */
+  background: linear-gradient(135deg, #ffa6e8, #cba1ff);
   color: #fff;
   border: none;
   padding: 12px 40px;
@@ -509,7 +510,9 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 8px 20px rgba(123, 140, 255, 0.3);
+
+  /* 2. 그림자 색상도 파란색 계열에서 핑크색 계열로 맞춰서 자연스럽게 빛나게 조절 */
+  box-shadow: 0 8px 20px rgba(255, 140, 224, 0.4);
 }
 
 .submit-btn:hover {

@@ -397,7 +397,7 @@ body::before {
 
 /* 수정 완료 버튼 (그라데이션) */
 .submit-btn {
-  background: linear-gradient(135deg, #7b8cff, #7be0cf);
+  background: linear-gradient(135deg, #ff8ce0, #bb88ff);
   color: #fff;
   border: none;
   padding: 12px 40px;
@@ -406,7 +406,7 @@ body::before {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 8px 20px rgba(123, 140, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 140, 224, 0.4);
 }
 
 .submit-btn:hover {

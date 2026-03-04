@@ -242,8 +242,14 @@ button {
     border-radius: 20px;
     font-size: 13px;
     font-weight: 700;
-    background-color: rgba(123, 140, 255, 0.15); /* 연한 블루/보라 */
-    color: #5e5ce6;
+    /* 1. 배경을 핑크/연보라 그라데이션으로 변경 */
+        background: linear-gradient(135deg, #ffa6e8, #cba1ff);
+
+        /* 2. 텍스트 색상을 하얀색으로 변경 */
+        color: white;
+
+        /* (선택) 뱃지가 살짝 떠보이게 하려면 아래 그림자를 추가하셔도 예쁩니다! */
+        box-shadow: 0 8px 20px rgba(255, 166, 232, 0.3);
     margin-bottom: 15px;
 }
 
@@ -606,21 +612,69 @@ button {
     text-decoration: underline;
 }
 
-/* 수정 입력창 스타일 */
+/* 수정 입력창 전체 래퍼 */
 .comment-edit-box {
-    margin-top: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 입력창과 버튼 사이의 간격 */
 }
+
+/* 텍스트 입력창 스타일 */
 .edit-input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 5px;
+    padding: 12px 14px;
+    background-color: #f5f6f8; /* 흰색 배경과 구분되도록 아주 연한 회색톤 배경 */
+    border: 1px solid transparent; /* 기본 테두리 제거 */
+    border-radius: 12px; /* 전체적인 테마에 맞게 둥글게 */
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
 }
+
+/* 입력창을 클릭(포커스)했을 때의 예쁜 효과 */
+.edit-input:focus {
+    background-color: #fff;
+    border: 1px solid #cba1ff; /* 포인트 컬러인 연보라색 테두리 */
+    box-shadow: 0 0 0 3px rgba(203, 161, 255, 0.15); /* 은은한 바깥쪽 빛 번짐 */
+}
+
+/* 버튼들을 오른쪽으로 예쁘게 정렬 */
+.edit-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px; /* 버튼 사이 간격 */
+}
+
+/* 버튼 공통 스타일 */
 .edit-actions button {
-    padding: 4px 8px;
-    font-size: 12px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px; /* 트렌디한 알약 모양 */
+    border: none;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 1. 첫 번째 버튼 [저장] - 위의 '등록' 버튼과 비슷한 다크톤으로 묵직하게 */
+.edit-actions button:first-child {
+    background-color: #3b3d40;
+    color: #ffffff;
+}
+.edit-actions button:first-child:hover {
+    background-color: #5a5c5f;
+}
+
+/* 2. 두 번째 버튼 [취소] - 눈에 덜 띄게 부드러운 톤으로 */
+.edit-actions button:last-child {
+    background-color: #f0f1f4;
+    color: #6c737f;
+}
+.edit-actions button:last-child:hover {
+    background-color: #e2e4e8;
 }
 
 
@@ -716,7 +770,7 @@ button {
 
 .list-btn {
     /* boardWrite 등록 버튼과 동일한 푸른색 그라데이션 */
-    background: linear-gradient(135deg, #7b8cff, #7be0cf);
+    background: linear-gradient(135deg, #ff8ce0, #bb88ff);
     color: white;
     border: none;
     padding: 12px 40px;
@@ -742,4 +796,96 @@ button {
 .list-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(123, 140, 255, 0.2);
+}
+
+/* ===============================
+   커스텀 모달 (Alert / Confirm)
+=============================== */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 배경을 살짝 어둡게 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.custom-modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.custom-modal {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-20px);
+    transition: transform 0.2s ease;
+    min-width: 340px;
+}
+
+.custom-modal-overlay.show .custom-modal {
+    transform: translateY(0);
+}
+
+.custom-modal-body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* 이미지의 빨간색 느낌표 아이콘 */
+.custom-modal-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #ff8e8e;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.custom-modal-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3b3d40;
+}
+
+/* 버튼 정렬 */
+.custom-modal-buttons {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.custom-modal-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 확인 버튼 (핑크/연보라 그라데이션) */
+.custom-btn-confirm {
+    background: linear-gradient(135deg, #ff8ce0, #bb88ff);
+    color: #ffffff;
+}
+
+/* 취소 버튼 (연한 회색) */
+.custom-btn-cancel {
+    background: #f0f1f4;
+    color: #6c737f;
 }

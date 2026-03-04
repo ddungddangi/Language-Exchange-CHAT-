@@ -407,7 +407,7 @@ button {
     width: 100%;
     padding: 14px;
     /* boardList의 작성 버튼과 동일한 그라데이션 */
-    background: linear-gradient(135deg, #7b8cff, #7be0cf);
+    background: linear-gradient(135deg, #ffa6e8, #cba1ff);
     color: white;
     border: none;
     border-radius: 16px;
@@ -415,7 +415,7 @@ button {
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
-    box-shadow: 0 8px 20px rgba(123, 140, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 140, 224, 0.4);
 }
 
 .share-btn:hover {

@@ -209,12 +209,12 @@ a {
 
 .main-title {
     font-size: 42px;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: -1px;
     margin-bottom: 10px;
 
 
-    background: linear-gradient(135deg, #4a90e2, #0056b3);
+    background: linear-gradient(to right, #ff8ce0, #bb88ff);
     -webkit-background-clip: text; /* 배경을 텍스트 모양으로 자름 */
     background-clip: text;
     -webkit-text-fill-color: transparent; /* 텍스트 자체 색상을 투명하게 만듦 */

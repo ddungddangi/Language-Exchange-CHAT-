@@ -269,14 +269,15 @@ a {
 }
 
 .write-btn {
-    /* boardWrite의 submit-btn과 동일한 스타일 */
-    background: linear-gradient(135deg, #7b8cff, #7be0cf);
+    /* 1. 배경을 핑크/연보라 그라데이션으로 변경 */
+    background: linear-gradient(135deg, #ff8ce0, #bb88ff);
     color: white;
     padding: 12px 28px;
     border-radius: 999px;
     font-weight: 700;
     font-size: 15px;
-    box-shadow: 0 8px 20px rgba(123, 140, 255, 0.3);
+    /* 2. 그림자 색상도 핑크색으로 변경하여 은은하게 빛나도록 조절 */
+    box-shadow: 0 8px 20px rgba(255, 140, 224, 0.4);
     transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
     display: inline-flex;
     align-items: center;
@@ -418,8 +419,15 @@ a {
     border-radius: 20px;
     font-size: 13px;
     font-weight: 600;
-    background-color: rgba(123, 140, 255, 0.15); /* 연한 블루/보라 */
-    color: #5e5ce6;
+
+    /* 1. 배경을 핑크/연보라 그라데이션으로 변경 */
+    background: linear-gradient(135deg, #ffa6e8, #cba1ff);
+
+    /* 2. 텍스트 색상을 하얀색으로 변경 */
+    color: white;
+
+    /* (선택) 뱃지가 살짝 떠보이게 하려면 아래 그림자를 추가하셔도 예쁩니다! */
+    box-shadow: 0 8px 20px rgba(255, 166, 232, 0.3);
 }
 
 /* 게시글 없음 메시지 */
@@ -466,11 +474,13 @@ a {
 }
 
 .page-number.current {
-    background: linear-gradient(135deg, #7b8cff, #7be0cf);
-    color: white;
+    /* 1. 배경을 파란색에서 핑크/연보라 그라데이션으로 변경 */
+    background: linear-gradient(135deg, #ffa6e8, #cba1ff);
+    color: white; /* 글자는 이미지처럼 흰색으로 유지 */
     font-weight: 700;
     border: none;
-    box-shadow: 0 4px 12px rgba(123, 140, 255, 0.3);
+    /* 2. 그림자 색상도 파란색에서 자연스러운 핑크색으로 변경 */
+    box-shadow: 0 8px 20px rgba(255, 166, 232, 0.3);
 }
 
 /* =========================
