@@ -37,7 +37,7 @@ public class MatchService {
 	private final RedisTemplate<String, Object> redisObjectTemplate;
 	private final ObjectMapper objectMapper = new ObjectMapper();
 	
-	private static final long RESULT_TTL_MIN = 1;
+	private static final long RESULT_TTL_SEC = 10;
 	
 	// pop 후보를 너무 오래 뒤지지 않도록 제한(실무에서는 대기열 크기/트래픽에 맞춰 조절)
 	private static final int TRY_POP_LIMIT = 30;
@@ -250,7 +250,7 @@ public class MatchService {
 	
 	private void setResult(Long userId, MatchResponseDTO res) {
 		String key = "match:result:" + userId;
-		redisObjectTemplate.opsForValue().set(key, res, RESULT_TTL_MIN, TimeUnit.MINUTES);
+		redisObjectTemplate.opsForValue().set(key, res, RESULT_TTL_SEC, TimeUnit.SECONDS);
 	}
 	
 	private MatchResponseDTO getResult(Long userId) {

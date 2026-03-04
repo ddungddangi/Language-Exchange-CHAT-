@@ -22,7 +22,7 @@ public class RedisMatchQueueService {
 	// (MatchService에 있는 result 키와 동일 규칙이면 여기서도 지울 수 있음)
 	private static final String RESULT_PREFIX = "match:result:";
 	
-	private static final long CRITERIA_TTL_MIN = 1;
+	private static final long CRITERIA_TTL_SEC = 10;
 	
 	// 큐에서 1명 꺼내고(waiting에서도 제거) partnerId 반환, 없으면 0
 	private static final String LUA_POP_ONE = """
@@ -61,7 +61,7 @@ public class RedisMatchQueueService {
 	
 	public void saveCriteria(Long userId, String criteriaKey) {
 		if (criteriaKey == null) return;
-		redisTemplate.opsForValue().set(CRITERIA_PREFIX + userId, criteriaKey, CRITERIA_TTL_MIN, TimeUnit.MINUTES);
+		redisTemplate.opsForValue().set(CRITERIA_PREFIX + userId, criteriaKey, CRITERIA_TTL_SEC, TimeUnit.SECONDS);
 	}
 	
 	public String getCriteria(Long userId) {
