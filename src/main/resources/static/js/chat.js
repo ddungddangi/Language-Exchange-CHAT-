@@ -76,33 +76,36 @@ function loadChatRooms() {
 
             rooms.forEach(room => {
                 const roomId = room.roomId;
-                const roomName = room.roomName;
+
+                // ✅ 방 이름 대신 백엔드에서 받아온 '상대방 닉네임'을 사용합니다!
+                const displayRoomName = room.opponentNickname || room.roomName;
 
                 const li = document.createElement("li");
                 li.className = "room-item";
                 li.dataset.roomId = String(roomId);
-                li.dataset.roomName = roomName;
-                li.onclick = () => enterRoom(roomId, roomName, li);
+                // li를 클릭했을 때 상단 타이틀도 상대방 이름으로 뜨게 하려면 아래처럼 변경
+                li.dataset.roomName = displayRoomName;
+                li.onclick = () => enterRoom(roomId, displayRoomName, li);
 
                 const unreadDot = room.hasUnread ? `<span class="unread-dot"></span>` : ``;
 
-                // ✅ 백엔드에서 넘어오는 프로필 이미지 경로 조합 (없으면 기본 이미지)
                 let profileSrc = "/images/profile/default.png";
                 if (room.opponentProfileImg && room.opponentProfileImgName) {
                     const basePath = room.opponentProfileImg.endsWith("/") ? room.opponentProfileImg : room.opponentProfileImg + "/";
                     profileSrc = basePath + room.opponentProfileImgName;
+                    profileSrc = profileSrc.replace("default.png/default.png", "default.png"); // 중복 버그 방지
                 }
 
+                // 🚨 여기서 room-last-msg (ID 표시 부분)을 아예 삭제했습니다!
                 li.innerHTML = `
                     <div class="room-avatar" style="overflow: hidden; border-radius: 50%;">
                         <img src="${profileSrc}" alt="프로필" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="room-info">
                         <div class="room-name">
-                            ${roomName}
+                            ${displayRoomName}
                             ${unreadDot}
                         </div>
-                        <div class="room-last-msg">ID: ${roomId}</div>
                     </div>
                 `;
 
