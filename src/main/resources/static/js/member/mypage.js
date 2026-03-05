@@ -150,7 +150,7 @@ if (countRes.ok) {
       introEl.textContent = introTextarea.value || "자기소개를 작성해 주세요.";
       levelTextEl.textContent = levelSelect.value;
       modal.classList.add("hidden");
-      alert("프로필 수정 완료");
+      customAlert("프로필 수정 완료");
     }
   });
 });
@@ -692,7 +692,7 @@ document.addEventListener("click", async (e) => {
 
   } catch (err) {
     console.error(err);
-    alert("채팅방 생성 실패");
+    customAlert("채팅방 생성 실패");
     card.style.pointerEvents = "auto";
   }
 });

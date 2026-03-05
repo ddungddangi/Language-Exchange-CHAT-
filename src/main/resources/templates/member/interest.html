@@ -9,6 +9,7 @@
     <!-- 공통 CSS -->
     <link rel="stylesheet" th:href="@{/css/layout.css}">
     <link rel="stylesheet" th:href="@{/css/member/interest.css}" />
+    <link rel="stylesheet" th:href="@{/css/member/customAlert.css}" />
 
     <script th:inline="javascript">
         /*<![CDATA[*/
@@ -17,6 +18,7 @@
     </script>
 
     <script th:src="@{/js/member/interest.js}" defer></script>
+    <script th:src="@{/js/member/modal.js}" defer></script>
 </head>
 
 <body>
@@ -127,6 +129,16 @@
 
     <div th:replace="~{fragments/footer :: footer}"></div>
 
+
+    <div id="customModalOverlay" class="custom-modal-overlay">
+        <div class="custom-modal">
+            <div class="custom-modal-body">
+                <div class="custom-modal-icon">!</div>
+                <div class="custom-modal-text" id="customModalText">메시지</div>
+            </div>
+            <div class="custom-modal-buttons" id="customModalButtons"></div>
+        </div>
+    </div>
 </body>
 
 </html>

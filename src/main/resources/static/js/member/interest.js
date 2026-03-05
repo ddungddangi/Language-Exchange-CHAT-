@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   saveBtn?.addEventListener("click", async () => {
     const interests = getSelectedInterests();
     if (interests.length === 0) {
-      alert("관심사를 하나 이상 선택해 주세요.");
+      customAlert("관심사를 하나 이상 선택해 주세요.");
       return;
     }
 
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify(interests)
       });
 
-      alert("관심사 저장 완료");
+      await customAlert("관심사 저장 완료");
       location.href = "/";
     } catch (e) {
       console.error(e);
-      alert("관심사 저장 실패");
+      customAlert("관심사 저장 실패");
     }
   });
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const count = document.querySelectorAll(".interest-item.active").length;
     if (count >= MAX) {
-      alert("관심사는 최대 5개까지 선택할 수 있어요!");
+      customAlert("관심사는 최대 5개까지 선택할 수 있어요!");
       return;
     }
 
