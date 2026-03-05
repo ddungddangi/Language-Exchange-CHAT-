@@ -156,4 +156,32 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     });
+
+    const deleteForm = document.getElementById("deleteForm");
+
+    if (deleteForm) {
+        deleteForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            showCustomConfirm("정말 삭제하시겠습니까?", function() {
+                deleteForm.submit();
+            });
+        });
+    }
+
+    const editForm = document.querySelector(".edit-form");
+
+    if (editForm) {
+        editForm.addEventListener("submit", function(e) {
+
+            e.preventDefault();
+
+            showCustomConfirm("문의 내용을 수정하시겠습니까?", function() {
+                editForm.submit();
+            });
+
+        });
+    }
+
 });
+

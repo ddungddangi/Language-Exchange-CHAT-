@@ -36,7 +36,7 @@ public class AdminDashboardController {
 		model.addAttribute("todayUsers",
 				userRepository.countByCreatedAtAfter(LocalDate.now().atStartOfDay()));
 		
-		model.addAttribute("noticeCount", noticeRepository.count());
+		model.addAttribute("noticeCount", noticeRepository.count() + boardRepository.count());
 		model.addAttribute("inquiryCount", inquiryRepository.count());
 		
 		return "admin/dashboard";

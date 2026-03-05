@@ -2,6 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title th:text="${title} + ' | Musubi'">Musubi -  공지사항</title>
+
+
     <link rel="stylesheet" th:href="@{/css/layout.css}">
     <link rel="stylesheet" th:href="@{/css/notice/notice.css}">
 </head>
@@ -45,6 +47,17 @@
     </div>
 </main>
 
+<div id="customModalOverlay" class="custom-modal-overlay">
+    <div class="custom-modal">
+        <div class="custom-modal-body">
+            <div class="custom-modal-icon">!</div>
+            <div class="custom-modal-text" id="customModalText"></div>
+        </div>
+
+        <div class="custom-modal-buttons" id="customModalButtons"></div>
+    </div>
+</div>
+
 <!-- 수정 모달 -->
 <div id="editModal" class="modal hidden">
     <div class="modal-content">
@@ -62,5 +75,29 @@
 
 <div th:replace="~{fragments/footer :: footer}"></div>
 <script th:src="@{/js/notice/notice-detail.js}"></script>
+<script>
+    function showCustomConfirm(message, onConfirmCallback) {
+
+        document.getElementById("customModalText").innerText = message;
+
+        const btnContainer = document.getElementById("customModalButtons");
+
+        btnContainer.innerHTML = `
+            <button class="custom-modal-btn custom-btn-confirm" id="modalConfirmBtn">확인</button>
+            <button class="custom-modal-btn custom-btn-cancel" onclick="closeCustomModal()">취소</button>
+        `;
+
+        document.getElementById("modalConfirmBtn").onclick = function() {
+            closeCustomModal();
+            onConfirmCallback();
+        };
+
+        document.getElementById("customModalOverlay").classList.add("show");
+    }
+
+    function closeCustomModal() {
+        document.getElementById("customModalOverlay").classList.remove("show");
+    }
+</script>
 </body>
 </html>

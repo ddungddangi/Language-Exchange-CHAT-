@@ -62,9 +62,9 @@
 
         <!-- DELETE -->
         <form class="delete-form"
+              id="deleteForm"
               th:action="@{/customer/inquiry/{id}/delete(id=${inquiry.inquiryId})}"
-              method="post"
-              onsubmit="return confirm('정말 삭제하시겠습니까?');">
+              method="post">
 
             <div class="action-row">
                 <button type="submit" class="btn-delete">삭제</button>
@@ -75,7 +75,44 @@
     </div>
 </main>
 
+<div id="customModalOverlay" class="custom-modal-overlay">
+    <div class="custom-modal">
+        <div class="custom-modal-body">
+            <div class="custom-modal-icon">!</div>
+            <div class="custom-modal-text" id="customModalText">메시지</div>
+        </div>
+
+        <div class="custom-modal-buttons" id="customModalButtons"></div>
+    </div>
+</div>
+
 <div th:replace="~{fragments/footer :: footer}"></div>
 <script th:src="@{/js/inquiry/inquiry.js}"></script>
+
+<script>
+    function showCustomConfirm(message, onConfirmCallback) {
+
+        document.getElementById('customModalText').innerText = message;
+
+        const btnContainer = document.getElementById('customModalButtons');
+
+        btnContainer.innerHTML = `
+            <button class="custom-modal-btn custom-btn-confirm" id="modalConfirmBtn">확인</button>
+            <button class="custom-modal-btn custom-btn-cancel" onclick="closeCustomModal()">취소</button>
+        `;
+
+        document.getElementById('modalConfirmBtn').onclick = function() {
+            closeCustomModal();
+            onConfirmCallback();
+        };
+
+        document.getElementById('customModalOverlay').classList.add('show');
+    }
+
+    function closeCustomModal() {
+        document.getElementById('customModalOverlay').classList.remove('show');
+    }
+</script>
+
 </body>
 </html>

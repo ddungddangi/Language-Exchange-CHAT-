@@ -117,9 +117,9 @@ public class NoticeController {
 	
 	// 삭제
 	@PostMapping("/customer/notice/{id}/delete")
-	@ResponseBody
-	public void deleteNotice(@PathVariable Long id) {
+	public String deleteNotice(@PathVariable Long id) {
 		noticeService.deleteNotice(id);
+		return "redirect:/customer/notice";
 	}
 	
 	// 글작성 페이지

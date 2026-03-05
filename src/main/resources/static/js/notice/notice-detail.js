@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
     const wrapper = document.querySelector(".notice-detail-wrapper");
     const noticeId = wrapper?.dataset.noticeId;
 
@@ -43,13 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* 삭제 */
-    deleteBtn?.addEventListener("click", () => {
-        if (!confirm("정말 삭제하시겠습니까?")) return;
+  deleteBtn?.addEventListener("click", () => {
 
-        fetch(`/customer/notice/${noticeId}/delete`, {
-            method: "POST"
-        }).then(() => {
-            location.href = "/customer/notice";
-        });
-    });
+      showCustomConfirm("정말 삭제하시겠습니까?", () => {
+
+          const form = document.createElement("form");
+          form.method = "POST";
+          form.action = `/customer/notice/${noticeId}/delete`;
+
+          document.body.appendChild(form);
+          form.submit();
+
+      });
+
+  });
 });
