@@ -9,6 +9,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -62,7 +64,8 @@ public class UserEntity {
 	@Builder.Default
 	@Column(name = "manner", nullable = false)
 	private double manner = 36.5;
-
+	
+	@Builder.Default
 	@Column(name = "like_count", nullable = false)
 	private int likeCount = 0;
 
@@ -85,7 +88,13 @@ public class UserEntity {
 	@CreatedDate
 	@Column(name = "created_at", updatable = false)
 	private LocalDateTime createdAt;
-
+	
+	@Builder.Default
+	@OneToMany(mappedBy = "user",
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
+	private List<UserInterestEntity> interests = new ArrayList<>();
+	
 	// --- Builder 생성자 ---
 	@Builder
 	public UserEntity(String memberId, String password, String nickname, Gender gender,

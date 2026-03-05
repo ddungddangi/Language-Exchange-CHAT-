@@ -21,11 +21,11 @@
 
         <div class="card-header">
             <div class="user-profile">
-                <img th:src="${board.profileImageName != null ? '/images/profile/upload/' + board.profileImageName : '/images/default_profile.png'}"
+                <img th:src="${board.profileImageName != null ? board.profileImagePath + '/' + board.profileImageName : '/images/profile/default.png'}"
                      class="profile-img" alt="프로필">
                 <div class="user-info">
                     <span class="username" th:text="${board.writerNickname}">Username</span>
-                    <span class="location">게시글 수정</span>
+                    <span class="location">피드 수정</span>
                 </div>
             </div>
             <button type="button" class="close-btn" onclick="history.back()">✕</button>

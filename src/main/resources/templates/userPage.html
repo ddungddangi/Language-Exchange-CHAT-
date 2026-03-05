@@ -36,7 +36,7 @@
                 <div class="glass card profile-card">
                     <div class="avatar-wrap">
                         <img id="profileImage" class="avatar"
-                             th:src="${user.profileImageName != null ? '/images/profile/upload/' + user.profileImageName : '/images/profile/default.png'}"
+                             th:src="${user.profileImageName != null ? user.profileImagePath + '/' + user.profileImageName : '/images/profile/default.png'}"
                              alt="profile" />
                     </div>
 
@@ -102,7 +102,7 @@
 
     <div class="glass card mini-card">
         <div class="mini-head" style="margin-bottom: 8px;">
-            <h4>💌 현재 연락 중인 이성</h4>
+            <h4>💌 현재 연락 중인 친구</h4>
         </div>
     
         <div style="display:flex; align-items:center; gap:10px; justify-content:space-between;">

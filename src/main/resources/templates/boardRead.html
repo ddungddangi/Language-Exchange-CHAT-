@@ -25,7 +25,7 @@
             <div class="writer-info">
                 <a th:href="${#authentication.name == board.memberId} ? @{/member/mypage} : @{/member/userPage/{memberId}(memberId=${board.memberId})}"
                    style="display: block; cursor: pointer;">
-                    <img th:src="${board.profileImageName != null ? '/images/profile/upload/' + board.profileImageName : '/images/default_profile.png'}"
+                    <img th:src="${board.profileImageName != null ? board.profileImagePath + '/' + board.profileImageName : '/images/profile/default.png'}"
                          class="profile-img-sm" alt="프로필">
                 </a>
                 <div class="info-text">
@@ -117,7 +117,7 @@
 
                     <a th:href="${#authentication.name == comment.memberId} ? @{/member/mypage} : @{/member/userPage/{id}(id=${comment.memberId})}"
                        style="display: block; cursor: pointer;">
-                        <img th:src="${comment.writerProfileImage != null ? '/images/profile/upload/' + #strings.replace(comment.writerProfileImage, '/files/', '') : '/images/default_profile.png'}"
+                        <img th:src="${(comment.writerProfileImage != null and comment.writerProfileImage != 'default.png') ? '/images/profile/upload/' + #strings.replace(comment.writerProfileImage, '/files/', '') : '/images/profile/default.png'}"
                              class="cmt-profile" alt="프로필">
                     </a>
 
@@ -312,8 +312,8 @@
         })
         .then(newComment => {
             const commentList = document.getElementById('commentList');
-            let profileSrc = '/images/default_profile.png';
-            if (newComment.writerProfileImage) {
+            let profileSrc = '/images/profile/default.png';
+            if (newComment.writerProfileImage && newComment.writerProfileImage !== 'default.png') {
                 const cleanPath = newComment.writerProfileImage.replace('/files/', '');
                 profileSrc = '/images/profile/upload/' + cleanPath;
             }

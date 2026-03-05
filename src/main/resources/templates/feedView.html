@@ -31,7 +31,7 @@
             <div class="user-profile">
                 <a th:href="${#authentication.name == feed.memberId} ? @{/member/mypage} : @{/member/userPage/{memberId}(memberId=${feed.memberId})}"
                    style="display: block; cursor: pointer;">
-                    <img th:src="${feed.profileImageName != null ? '/images/profile/upload/' + feed.profileImageName : '/images/default_profile.png'}"
+                    <img th:src="${feed.profileImageName != null ? feed.profileImagePath + '/' + feed.profileImageName : '/images/profile/default.png'}"
                          class="profile-img-sm" alt="프로필">
                 </a>
                 <div class="user-info">
@@ -331,10 +331,10 @@
             const paginationArea = document.getElementById('paginationArea');
 
             data.content.forEach(feed => {
-                let profileSrc = '/images/default_profile.png';
+                let profileSrc = '/images/profile/default.png';
                 if (feed.profileImageName) {
                     const cleanName = feed.profileImageName.replace('/files/', '');
-                    profileSrc = '/images/profile/upload/' + cleanName;
+                    profileSrc = feed.profileImagePath + cleanName;
                 }
 
                 let dateStr = "";
@@ -490,9 +490,13 @@
         const loginInput = document.getElementById('loginUserId');
         const currentUserId = loginInput ? loginInput.value : "";
 
-        let profileSrc = comment.writerProfileImage
-            ? '/images/profile/upload/' + comment.writerProfileImage.replace('/files/', '')
-            : '/images/default_profile.png';
+
+        let profileSrc = '/images/profile/default.png';
+
+        // DB에서 넘어온 값이 존재하고, 그 값이 'default.png'가 아닐 때만 upload 경로를 붙임!
+        if (comment.writerProfileImage && comment.writerProfileImage !== 'default.png') {
+            profileSrc = '/images/profile/upload/' + comment.writerProfileImage.replace('/files/', '');
+        }
 
         let formattedDate = "";
         if (comment.createdDate) {

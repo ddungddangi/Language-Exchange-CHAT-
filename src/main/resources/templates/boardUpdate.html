@@ -33,7 +33,7 @@
 
         <div class="writer-info">
             <div class="avatar">
-                <img th:src="${board.profileImageName != null ? '/images/profile/upload/' + board.profileImageName : '/images/default_profile.png'}" alt="프로필">
+                <img th:src="${board.profileImageName != null ? board.profileImagePath + '/' + board.profileImageName : '/images/profile/default.png'}" alt="프로필">
             </div>
             <div class="info-text">
                 <span class="nickname" th:text="${board.writerNickname}">닉네임</span>

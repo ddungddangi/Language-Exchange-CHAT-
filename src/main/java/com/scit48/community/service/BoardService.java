@@ -217,6 +217,7 @@ public class BoardService {
 				.categoryName(board.getCategory().getName())
 				.writerNickname(board.getUser().getNickname())
 				.profileImageName(board.getUser().getProfileImageName())
+				.profileImagePath(board.getUser().getProfileImagePath())
 				.memberId(board.getUser().getMemberId())
 				.build());
 	}
@@ -299,7 +300,7 @@ public class BoardService {
 
 		// 3. 프로필 이미지 경로 처리 (앞선 답변 참고)
 		String profileName = board.getUser().getProfileImageName();
-		String profilePath = (profileName != null) ? "/files/" + profileName : "/images/default_profile.png";
+		String profilePath = (profileName != null) ? "/files/" + profileName : "/images/profile/default.png";
 
 		// 4. Entity -> DTO 변환
 		return BoardDTO.builder()
@@ -315,7 +316,7 @@ public class BoardService {
 				.writerNickname(board.getUser().getNickname())
 				.memberId(board.getUser().getMemberId())
 				.nation(board.getUser().getNation())
-				.profileImagePath(profilePath) // 프로필 경로
+				.profileImagePath(board.getUser().getProfileImagePath()) // 프로필 경로
 				.manner(board.getUser().getManner()) // 매너온도 (있다면)
 				.filePath(board.getFilePath()) // 첨부파일(이미지)
 				.fileName(board.getFileName())
@@ -324,9 +325,7 @@ public class BoardService {
 						.commentId(c.getCommentId())
 						.content(c.getContent())
 						.writerNickname(c.getUser().getNickname())
-						.writerProfileImage(c.getUser().getProfileImageName() != null
-								? "/files/" + c.getUser().getProfileImageName()
-								: "/images/default_profile.png")
+						.writerProfileImage(c.getUser().getProfileImageName())
 						.createdDate(c.getCreatedAt())
 						.memberId(c.getUser().getMemberId())
 						.build()).collect(Collectors.toList()))
@@ -360,7 +359,7 @@ public class BoardService {
 				.writerNickname(board.getUser().getNickname())
 				.memberId(board.getUser().getMemberId())
 				.nation(board.getUser().getNation())
-				.profileImagePath(profilePath) // 프로필 경로
+				.profileImagePath(board.getUser().getProfileImagePath()) // 프로필 경로
 				.manner(board.getUser().getManner()) // 매너온도 (있다면)
 				.filePath(board.getFilePath()) // 첨부파일(이미지)
 				.fileName(board.getFileName())

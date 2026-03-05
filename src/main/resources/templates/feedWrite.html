@@ -19,7 +19,7 @@
 
         <div class="card-header">
             <div class="user-profile">
-                <img th:src="${'/images/profile/upload/' + user.profileImageName}"
+                <img th:src="${user.profileImageName != null ? user.profileImagePath + '/' + user.profileImageName : '/images/profile/default.png'}"
                      alt="User" class="profile-img">
                 <div class="user-info">
                     <span class="username" th:text="${user.nickname}"></span>

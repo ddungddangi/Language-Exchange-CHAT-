@@ -237,6 +237,7 @@ public class BoardController {
 					.likeCnt(board.getLikeCnt() != null ? board.getLikeCnt() : 0)
 					.liked(isLiked) // 최적화된 결과
 					.createdDate(board.getCreatedAt())
+					.profileImagePath(board.getUser().getProfileImagePath())
 					.nation(board.getUser().getNation())
 					.memberId(board.getUser().getMemberId())
 					.build();

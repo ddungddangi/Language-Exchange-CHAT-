@@ -77,11 +77,11 @@
 
                 <td class="writer-cell">
                     <a th:if="${#authentication.name == board.memberId}" th:href="@{/member/mypage}">
-                        <img th:src="${board.profileImageName != null ? '/images/profile/upload/' + board.profileImageName : '/images/default_profile.png'}"
+                        <img th:src="${board.profileImageName != null ? board.profileImagePath + '/' + board.profileImageName : '/images/profile/default.png'}"
                              class="profile-img-sm" alt="프로필">
                     </a>
                     <a th:unless="${#authentication.name == board.memberId}" th:href="@{/member/userPage/{memberId}(memberId=${board.memberId})}">
-                        <img th:src="${board.profileImageName != null ? '/images/profile/upload/' + board.profileImageName : '/images/default_profile.png'}"
+                        <img th:src="${board.profileImageName != null ? board.profileImagePath + '/' + board.profileImageName : '/images/profile/default.png'}"
                              class="profile-img-sm" alt="프로필">
                     </a>
                     <span th:text="${board.writerNickname}"></span>
