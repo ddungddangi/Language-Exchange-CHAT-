@@ -8,7 +8,7 @@
 
     <!-- 정적 CSS -->
     <link rel="stylesheet" th:href="@{/css/member/login.css}" />
-
+<link rel="stylesheet" th:href="@{/css/member/customAlert.css}" />
 
     <script th:inline="javascript">
 
@@ -16,6 +16,7 @@
 
     </script>
 </head>
+
 
 <body>
 
@@ -53,11 +54,26 @@
             </div>
         </form>
 
+
     </div>
 
+<div id="customModalOverlay" class="custom-modal-overlay">
+    <div class="custom-modal">
+        <div class="custom-modal-body">
+            <div class="custom-modal-icon">!</div>
+            <div class="custom-modal-text" id="customModalText">메시지</div>
+        </div>
+        <div class="custom-modal-buttons" id="customModalButtons"></div>
+    </div>
+</div>
+
+<script th:src="@{/js/member/modal.js}" defer></script>
+<script th:src="@{/js/member/login.js}" defer></script>
+
+
     <!-- 정적 JS -->
-    <script th:src="@{/js/member/login.js}" defer></script>
 
 </body>
+
 
 </html>

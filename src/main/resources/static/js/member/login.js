@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = await res.json();
 
     if (result.status !== "SUCCESS") {
-      alert(result.message);
+      await customAlert(result.message);   
       return;
     }
 

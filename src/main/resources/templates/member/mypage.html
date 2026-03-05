@@ -9,6 +9,7 @@
     <link rel="stylesheet" th:href="@{/css/member/mypage.css}" />
     <link rel="stylesheet" th:href="@{/css/member/interest.css}" />
     <link rel="stylesheet" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" th:href="@{/css/member/customAlert.css}" />
 
     <script th:inline="javascript">
         /*<![CDATA[*/
@@ -416,8 +417,19 @@
 
     <div th:replace="~{fragments/footer :: footer}"></div>
 
+    <div id="customModalOverlay" class="custom-modal-overlay">
+        <div class="custom-modal">
+            <div class="custom-modal-body">
+                <div class="custom-modal-icon">!</div>
+                <div class="custom-modal-text" id="customModalText">메시지</div>
+            </div>
+            <div class="custom-modal-buttons" id="customModalButtons"></div>
+        </div>
+    </div>
+
 </body>
 <script th:src="@{/js/member/logout.js}"></script>
 <script th:src="@{/js/member/interestModal.js}"></script>
+<script th:src="@{/js/member/modal.js}" defer></script>
 
 </html>

@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const memberId = memberIdInput.value.trim();
 
     if (!memberId) {
-      alert("아이디를 입력하세요");
+      await customAlert("아이디를 입력하세요");
       return;
     }
 
     if (!validateMemberId(memberId)) {
-      alert("아이디는 3~12자 영문과 숫자만 가능합니다.");
+      await customAlert("아이디는 3~12자 영문과 숫자만 가능합니다.");
       return;
     }
 
@@ -61,14 +61,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await res.json();
 
       if (res.ok && result.data?.available) {
-        alert("사용 가능한 아이디입니다");
+        await customAlert("사용 가능한 아이디입니다");
         isMemberIdChecked = true;
       } else {
-        alert("이미 사용 중인 아이디입니다");
+        await customAlert("이미 사용 중인 아이디입니다");
         isMemberIdChecked = false;
       }
     } catch (e) {
-      alert("아이디 확인 중 오류가 발생했습니다.");
+      await customAlert("아이디 확인 중 오류가 발생했습니다.");
       isMemberIdChecked = false;
     }
   });
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nickname = nicknameInput.value.trim();
 
     if (!nickname) {
-      alert("닉네임을 입력하세요");
+      await customAlert("닉네임을 입력하세요");
       return;
     }
 
@@ -95,14 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await res.json();
 
       if (res.ok && result.data?.available) {
-        alert("사용 가능한 닉네임입니다");
+        await customAlert("사용 가능한 닉네임입니다");
         isNicknameChecked = true;
       } else {
-        alert("이미 사용 중인 닉네임입니다");
+        await customAlert("이미 사용 중인 닉네임입니다");
         isNicknameChecked = false;
       }
     } catch (e) {
-      alert("닉네임 확인 중 오류가 발생했습니다.");
+      await customAlert("닉네임 확인 중 오류가 발생했습니다.");
       isNicknameChecked = false;
     }
   });
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!file) return;
 
     if (!file.type.startsWith("image/")) {
-      alert("이미지 파일만 업로드 가능합니다.");
+      customAlert("이미지 파일만 업로드 가능합니다.");
       imageInput.value = "";
       return;
     }
@@ -151,44 +151,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* 아이디 형식 */
     if (!validateMemberId(memberId)) {
-      alert("아이디는 3~12자 영문과 숫자만 가능합니다.");
+      await customAlert("아이디는 3~12자 영문과 숫자만 가능합니다.");
       return;
     }
 
     /* 비밀번호 형식 */
     if (!validatePassword(password)) {
-      alert("비밀번호는 8~20자이며 영문과 숫자를 각각 최소 1개 이상 포함해야 합니다.");
+      await customAlert("비밀번호는 8~20자이며 영문과 숫자를 각각 최소 1개 이상 포함해야 합니다.");
       return;
     }
 
     /* 비밀번호 확인 */
     if (password !== form.passwordConfirm.value) {
-      alert("비밀번호가 일치하지 않습니다.");
+      await customAlert("비밀번호가 일치하지 않습니다.");
       return;
     }
 
     /* 약관 동의 */
     if (!tos.checked || !privacy.checked) {
-      alert("필수 약관에 동의해주세요.");
+      await customAlert("필수 약관에 동의해주세요.");
       return;
     }
 
     /* 중복 확인 */
     if (!isMemberIdChecked || !isNicknameChecked) {
-      alert("아이디와 닉네임 중복 확인을 완료해주세요.");
+    await customAlert("아이디와 닉네임 중복 확인을 완료해주세요.");
       return;
     }
 
     /* 나이 검증 */
     const age = Number(form.age.value);
     if (Number.isNaN(age) || age < 18) {
-      alert("회원가입은 18세 이상만 가능합니다.");
+      await customAlert("회원가입은 18세 이상만 가능합니다.");
       return;
     }
 
     /* 학습 언어 선택 */
     if (!studyLanguage.value) {
-      alert("학습 언어를 선택해주세요.");
+      await customAlert("학습 언어를 선택해주세요.");
       return;
     }
 
@@ -225,14 +225,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await res.json();
 
       if (!res.ok || result.status !== "SUCCESS") {
-        alert(result.message ?? "회원가입에 실패했습니다.");
+        await customAlert(result.message ?? "회원가입에 실패했습니다.");      
         return;
       }
 
-      alert("회원가입 완료");
+      await customAlert("회원가입 완료");
       location.href = `${CONTEXT_PATH}member/interest`;
     } catch (e) {
-      alert("회원가입 중 오류가 발생했습니다.");
+      await customAlert("회원가입 중 오류가 발생했습니다.");
     }
   });
 });
