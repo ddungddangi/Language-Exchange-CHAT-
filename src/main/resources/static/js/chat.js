@@ -298,7 +298,8 @@ function showUi(message) {
                 transResultBox.style.display = "none";
             } else {
                 transResultBox.style.display = "block";
-                requestTranslation(message.message, transResultBox);
+                // ✅ 태그와 이모티콘이 제거된 '순수 텍스트'만 번역 요청
+                requestTranslation(cleanText, transResultBox);
             }
         };
         actionToolbar.appendChild(transBtn);
