@@ -85,22 +85,22 @@ Cowork Tools
 
 로그인
 
-<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="800">
+<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="400">
 
 ---
 
 회원가입
-<img src="src/main/resources/static/images/readmeimages/signup.jpeg" width="800">
+<img src="src/main/resources/static/images/readmeimages/signup.png" width="400">
 
 ---
 
 관심사
-<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="800">
+<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="400">
 
 ---
 
 마이페이지
-<img src="src/main/resources/static/images/readmeimages/mypage.jpeg" width="800">
+<img src="src/main/resources/static/images/readmeimages/mypage.png" width="400">
 
 ---
 
