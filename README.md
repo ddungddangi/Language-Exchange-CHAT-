@@ -1,6 +1,6 @@
 # 📌 프로젝트 소개
 
-## 무스비 프로젝트
+## Musubi Project
 
 언어 교환을 목적으로 한 웹 플랫폼으로,
 Java(Spring Boot) 기반 백엔드와 HTML/CSS/JavaScript 프론트엔드로 개발되었습니다.
