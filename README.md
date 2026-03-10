@@ -30,28 +30,33 @@ PW: admin
 |                                                 [김한식](https://github.com/whatabae)                                                  |                                                 [이창휘](https://github.com/leechanghwi)                                                  |                                                 [최민석](https://github.com/wlvp3907-source)                                                  |                                                 [최동욱](https://github.com/ddungddangi)                                                  |                                                 [최근영](https://github.com/cky95-bit)                                                  |
 |                                                        검색 / 매칭 페이지 구현                                                         |                                                          인증 / 인가 페이지 구현                                                          |                                                            Main / Q&A / ADMIN 구현                                                            |                                                             채팅 페이지 구현                                                              |                                                          커뮤니티 페이지 구현                                                           |
 
-## 📌Stack
+## 📌 Stack
 
-Backend
+Backend  
+<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white"/>
+<img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat&logo=springboot&logoColor=white"/>
+<img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat&logo=thymeleaf&logoColor=white"/>
 
-<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat&logo=springboot&logoColor=white"/>
+Frontend  
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"/>
 
-Frontend
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"/>
+Database  
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white"/>
 
-Database
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white"/> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white"/>
-
-AI
+AI  
 <img src="https://img.shields.io/badge/Grok%20AI-000000?style=flat&logo=x&logoColor=white"/>
 
-Development Environment
+Development Environment  
 <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/>
 
-Version Control
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/>
+Version Control  
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/>
 
-Collaboration Tools
+Collaboration Tools  
 <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white"/>
 
 ## 📌 담당 기능
