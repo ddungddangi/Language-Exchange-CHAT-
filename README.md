@@ -111,48 +111,86 @@ Cowork Tools
 
 ## 프로젝트 미리보기
 
-### 인증/인가
+## 📌 구현 페이지와 주요 기능
 
-로그인
+### 👤 이창휘 (인증 / 회원)
 
-<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="400">
+#### 로그인
 
----
+<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="500">
 
-회원가입
+#### 회원가입
 
-<img src="src/main/resources/static/images/readmeimages/signup.png" width="400">
+<img src="src/main/resources/static/images/readmeimages/signup.png" width="500">
 
----
+#### 관심사 설정
 
-관심사
+<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="500">
 
-<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="400">
+#### 마이페이지
 
----
-
-마이페이지
-
-<img src="src/main/resources/static/images/readmeimages/mypage.png" width="400">
+<img src="src/main/resources/static/images/readmeimages/mypage.png" width="500">
 
 ---
 
-<br />
-<br />
-<br />
+### 👤 김한식 (매칭 시스템)
 
-한식님 이미지 넣어주세요
+#### 매칭 페이지
 
----
-
-근영님 이미지를 넣어주세요
+<img src="src/main/resources/static/images/readmeimages/recommend.png" width="500">
 
 ---
 
-동욱님 이미지를 넣어주세요
+### 👤 최근영 (커뮤니티)
+
+#### 커뮤니티 게시판
+
+<img src="src/main/resources/static/images/readmeimages/community-board.png" width="500">
+
+#### 커뮤니티 피드
+
+<img src="src/main/resources/static/images/readmeimages/community-feed.png" width="500">
+
+#### 상대 프로필
+
+<img src="src/main/resources/static/images/readmeimages/community-profile.png" width="500">
 
 ---
 
-민석님 이미지를 넣어주세요
+### 👤 최동욱 (채팅)
+
+#### 채팅 화면
+
+<img src="src/main/resources/static/images/readmeimages/chat.png" width="500">
+
+#### 채팅 주요 기능
+
+<img src="src/main/resources/static/images/readmeimages/chatdetail.png" width="500">
+
+<br/>
+
+<img src="src/main/resources/static/images/readmeimages/chatdetail2.png" width="500">
 
 ---
+
+### 👤 최민석 (Q&A / 관리자)
+
+#### 1:1 문의
+
+<img src="src/main/resources/static/images/readmeimages/inquiry.png" width="500">
+
+#### 관리자 대시보드
+
+<img src="src/main/resources/static/images/readmeimages/admindashboard.png" width="500">
+
+#### 문의 관리
+
+<img src="src/main/resources/static/images/readmeimages/admininquiry.png" width="500">
+
+#### 게시글 관리
+
+<img src="src/main/resources/static/images/readmeimages/adminpost.png" width="500">
+
+#### 회원 관리
+
+<img src="src/main/resources/static/images/readmeimages/adminuser.png" width="500">
