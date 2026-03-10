@@ -85,29 +85,30 @@ Cowork Tools
 
 로그인
 
-<img width="1672" alt="image" src="">
-<img width="222" alt="image" src="">
+<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="800">
 
 ---
 
 회원가입
-<img width="1656" alt="image" src="">
-<img width="222" alt="image" src="">
+<img src="src/main/resources/static/images/readmeimages/signup.jpeg" width="800">
+
+---
+
+관심사
+<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="800">
+
+---
+
+마이페이지
+<img src="src/main/resources/static/images/readmeimages/mypage.jpeg" width="800">
 
 ---
 
 <br />
 <br />
 <br />
----
 
 한식님 이미지 넣어주세요
-
----
-
-<br />
-<br />
-<br />
 
 ---
 
@@ -115,11 +116,7 @@ Cowork Tools
 
 ---
 
----
-
 동욱님 이미지를 넣어주세요
-
----
 
 ---
 
