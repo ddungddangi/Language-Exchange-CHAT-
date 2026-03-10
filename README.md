@@ -117,19 +117,19 @@ Cowork Tools
 
 #### 로그인
 
-<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="500">
+<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="400">
 
 #### 회원가입
 
-<img src="src/main/resources/static/images/readmeimages/signup.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/signup.png" width="400">
 
 #### 관심사 설정
 
-<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="500">
+<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="400">
 
 #### 마이페이지
 
-<img src="src/main/resources/static/images/readmeimages/mypage.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/mypage.png" width="400">
 
 ---
 
@@ -145,15 +145,15 @@ Cowork Tools
 
 #### 커뮤니티 게시판
 
-<img src="src/main/resources/static/images/readmeimages/communityboard.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/communityboard.png" width="400">
 
 #### 커뮤니티 피드
 
-<img src="src/main/resources/static/images/readmeimages/communityfeed.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/communityfeed.png" width="400">
 
 #### 상대 프로필
 
-<img src="src/main/resources/static/images/readmeimages/communityprofile.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/communityprofile.png" width="400">
 
 ---
 
@@ -177,20 +177,20 @@ Cowork Tools
 
 #### 1:1 문의
 
-<img src="src/main/resources/static/images/readmeimages/inquiry.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/inquiry.png" width="400">
 
 #### 관리자 대시보드
 
-<img src="src/main/resources/static/images/readmeimages/admindashboard.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/admindashboard.png" width="400">
 
 #### 문의 관리
 
-<img src="src/main/resources/static/images/readmeimages/admininquiry.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/admininquiry.png" width="400">
 
 #### 게시글 관리
 
-<img src="src/main/resources/static/images/readmeimages/adminpost.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/adminpost.png" width="400">
 
 #### 회원 관리
 
-<img src="src/main/resources/static/images/readmeimages/adminuser.png" width="500">
+<img src="src/main/resources/static/images/readmeimages/adminuser.png" width="400">
