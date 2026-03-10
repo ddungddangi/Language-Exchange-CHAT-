@@ -1,1 +1,1 @@
-아키텍처 정리 # Backend
+프로젝트 정리 # Backend
