@@ -1,36 +1,34 @@
-# 📌 프로젝트 소개
+# 📌 プロジェクト紹介 (Project Overview)
 
 ## Musubi Project
 
-언어 교환을 목적으로 한 웹 플랫폼으로,
-Java(Spring Boot) 기반 백엔드와 HTML/CSS/JavaScript 프론트엔드로 개발되었습니다.
-또한 Redis, MySQL, Grok AI를 활용하여 매칭 및 AI 기능을 구현했습니다.
+言語交換（Language Exchange）を目的としたウェブプラットフォームであり、Java (Spring Boot) ベースのバックエンドと HTML/CSS/JavaScript フロントエンドで開発されました。
+さらに、Redis、MySQL、Grok AIを活用し、高度なマッチングシステムおよびAI機能を実装しています。
 
-## 📄 배포사이트
+## 📄 デプロイサイト (Deployment URL)
 
-[차후 업데이트 예정](주소입력)
+[後日アップデート予定](ここにURLを入力してください)
 
 ## 🖥️ Repository
 
 [Repo](https://github.com/SMARTCLOUDIT48/Backend)
 
-### 관리자(admin) 계정
+### 管理者(Admin) アカウント
 
-```
 ID: admin
 PW: admin
-```
 
-### 프로젝트 기간
 
-2026년 1월 19일 ~ 2026년 3월 5일
+### プロジェクト開発期間
 
-## 💁‍♂️ 개발팀원 및 역할
+2026年1月19日 ~ 2026年3月5日
+
+## 💁‍♂️ 開発メンバーおよび役割 (Team & Roles)
 
 | <a href="https://github.com/whatabae"><img src="https://avatars.githubusercontent.com/u/110452746?v=4" width=150px alt="김한식" /></a> | <a href="https://github.com/leechanghwi"><img src="https://avatars.githubusercontent.com/u/128275359?v=4" width=150px alt="이창휘" /></a> | <a href="https://github.com/wlvp3907-source"><img src="https://avatars.githubusercontent.com/u/254394004?v=4" width=150px alt="최민석" /></a> | <a href="https://github.com/ddungddangi"><img src="https://avatars.githubusercontent.com/u/204953123?v=4" width=150px alt="최동욱" /></a> | <a href="https://github.com/cky95-bit"><img src="https://avatars.githubusercontent.com/u/240850773?v=4" width=150px alt="최근영" /></a> |
-| :------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                 [김한식](https://github.com/whatabae) <br/> **Team Leader**                                                  |                                                 [이창휘](https://github.com/leechanghwi)                                                  |                                                 [최민석](https://github.com/wlvp3907-source)                                                  |                                                 [최동욱](https://github.com/ddungddangi)                                                  |                                                 [최근영](https://github.com/cky95-bit)                                                  |
-|                                                        검색 / 매칭 페이지 구현                                                         |                                                          인증 / 인가 페이지 구현                                                          |                                                            Main / Q&A / ADMIN 구현                                                            |                                                             채팅 페이지 구현                                                              |                                                          커뮤니티 페이지 구현                                                           |
+| :---: | :---: | :---: | :---: | :---: |
+| [김한식](https://github.com/whatabae) <br/> **Team Leader** | [이창휘](https://github.com/leechanghwi) | [최민석](https://github.com/wlvp3907-source) | [최동욱](https://github.com/ddungddangi) | [최근영](https://github.com/cky95-bit) |
+| 検索・マッチングページの実装 | 認証・認可ページの実装 | Main / Q&A / ADMINの実装 | チャットページの実装 | コミュニティページの実装 |
 
 ## 📌 Tech Stack
 
@@ -76,127 +74,34 @@ PW: admin
 <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=notion&logoColor=white"/>
 </p>
 
-## 📌 담당 기능
+---
 
-### 👤 이창휘 (인증 / 회원 기능)
-
-- 회원가입
-- 로그인
-- 로그아웃
-- 관심사 등록
-- 마이페이지
-- 개인정보 수정
-- 내 프로필을 본 사람
-- 내 프로필을 좋아요한 사람
-- 관심사 기반 친구 추천
-- 마이페이지 현재 대화중인 이성 수 조회
+## 📌 担当機能 (Assigned Features)
+### 👤 최동욱（チャットおよびAI機能）
+- リアルタイムチャット機能の実装
+- チャットルームの作成および管理
+- チャットメッセージの永続化・保存
+- ファイル送信機能
+- **AIを活用した自動応答機能**
+  - ユーザーが入力したメッセージに対し、AIが回答を生成してチャットに表示
+  - チャットサーバーからAI APIを呼び出し、リアルタイムで応答を生成
+- **AIベースのスペルチェック（文章校正）機能**
+- **AI翻訳機能（多言語翻訳サポート）**
+- **AI音声生成（Text-to-Speech）機能**
+- 音声録音機能
 
 ---
 
-### 👤 김한식 (검색, 매칭 시스템)
-
-- 파트너 추천 페이지 구현
-- 사용자 매칭 기능
-- 파트너 추천 알고리즘 구현
-- Redis 매칭 큐 관리
+## 📸 プロジェクトプレビュー (Project Preview)
 
 ---
 
-### 👤 최근영 (커뮤니티)
+### 👤 최동욱（チャットおよびAI機能）
 
-- 게시판 구현
-- 피드 구현
-- 게시글 작성 / 수정 / 삭제
-- 댓글 기능
-- 좋아요 기능
-- 유저 프로필
-- 유저 작성글 목록
-- 매너온도 반영
-- 대화중인 이성 수 표시
-
----
-
-### 👤 최동욱 (채팅)
-
-- 실시간 채팅 기능
-- 채팅방 생성 및 관리
-- 채팅 메시지 저장
-- 파일 전송 기능
-- AI를 활용한 자동 응답 기능
-- 사용자가 입력한 메시지에 대해 AI가 답변을 생성하여 채팅에 표시
-- 채팅 서버에서 AI API를 호출하여 응답 생성
-- AI 기반 맞춤법 교정 기능
-- AI 번역 기능 (다국어 번역 지원)
-- AI 음성 생성 기능 (텍스트를 음성으로 변환)
-- 음성 녹음 기능
-
----
-
-### 👤 최민석 (Main / Q&A / 관리자)
-
-- 메인페이지
-- 문의(Q&A) 등록
-- 관리자 문의 관리
-- 관리자 대시보드
-- 사용자 관리
-- 게시글 관리
-
-## 프로젝트 미리보기
-
-## 📌 구현 페이지와 주요 기능
-
-### 👤 이창휘 (인증 / 회원)
-
-#### 로그인
-
-<img src="src/main/resources/static/images/readmeimages/login.jpeg" width="400">
-
-#### 회원가입
-
-<img src="src/main/resources/static/images/readmeimages/signup.png" width="400">
-
-#### 관심사 설정
-
-<img src="src/main/resources/static/images/readmeimages/interest.jpeg" width="400">
-
-#### 마이페이지
-
-<img src="src/main/resources/static/images/readmeimages/mypage.png" width="400">
-
----
-
-### 👤 김한식 (검색, 매칭 시스템)
-
-#### 매칭 페이지
-
-<img src="src/main/resources/static/images/readmeimages/recommend.png" width="500">
-
----
-
-### 👤 최근영 (커뮤니티)
-
-#### 커뮤니티 게시판
-
-<img src="src/main/resources/static/images/readmeimages/communityboard.png" width="400">
-
-#### 커뮤니티 피드
-
-<img src="src/main/resources/static/images/readmeimages/communityfeed.png" width="400">
-
-#### 상대 프로필
-
-<img src="src/main/resources/static/images/readmeimages/communityprofile.png" width="400">
-
----
-
-### 👤 최동욱 (채팅)
-
-#### 채팅 화면
-
+#### チャット画面
 <img src="src/main/resources/static/images/readmeimages/chat.png" width="500">
 
-#### 채팅 주요 기능
-
+#### チャットの主要機能（AI翻訳・校正など）
 <img src="src/main/resources/static/images/readmeimages/chatdetail.png" width="500">
 
 <br/>
@@ -204,29 +109,3 @@ PW: admin
 <img src="src/main/resources/static/images/readmeimages/chatdetail2.png" width="500">
 
 ---
-
-### 👤 최민석 (Main / Q&A / 관리자)
-
-#### 메인 구현
-
-<img src="src/main/resources/static/images/readmeimages/main.png" width="400">
-
-#### 1:1 문의
-
-<img src="src/main/resources/static/images/readmeimages/inquiry.png" width="400">
-
-#### 관리자 대시보드
-
-<img src="src/main/resources/static/images/readmeimages/admindashboard.png" width="400">
-
-#### 문의 관리
-
-<img src="src/main/resources/static/images/readmeimages/admininquiry.png" width="400">
-
-#### 게시글 관리
-
-<img src="src/main/resources/static/images/readmeimages/adminpost.png" width="400">
-
-#### 회원 관리
-
-<img src="src/main/resources/static/images/readmeimages/adminuser.png" width="400">
