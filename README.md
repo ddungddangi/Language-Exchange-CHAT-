@@ -10,8 +10,11 @@
 - **チーム構成**: 計5名（自身の担当: チャットおよびAI機能のフルスタック開発）
 - **技術スタック**: Java (Spring Boot), Spring WebSocket, MySQL, Redis, HTML/CSS/JavaScript, Grok AI
 - **担当役割**: バックエンド & フロントエンドエンジニア（チャット・AI機能専任）
-- **🌐 デプロイサイト**: [後日アップデート予定](ここにURLを入力してください)
-- **🔑 テスト用管理者アカウント**: ID: `admin` / PW: `admin`
+
+## 💻 サイト画面 (Site Image)
+
+<img width="1920" height="2310" alt="main" src="https://github.com/user-attachments/assets/75df8c9a-5fa8-473f-a706-039448bc88d9" />
+
 
 ### 💡 主な担当業務と成果
 * **WebSocketを活用したリアルタイムチャットシステムの実装**
